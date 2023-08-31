@@ -1,4 +1,4 @@
-# Names
+# Authors
 Aloysio Winter, Carlo Mantovani, Felipe Elsner
 
 # Compile
