@@ -200,9 +200,11 @@ public class AsdrSample {
                      "MethodDeclaration --> public Type Identifier ( ( Type Identifier ( , Type Identifier )* )? ) { ( VarDeclaration )* ( Statement )* return Expression ; }");
             Statement();
          }
-         verifica(RETURN);
-         verifica(NUM);
-         verifica(';');
+         
+         verifica(CMDO);
+         // verifica(RETURN);
+         // verifica(NUM);
+         // verifica(';');
          verifica('}');
       } else {
          yyerror("MethodDeclaration - Esperado token: public");
@@ -231,7 +233,7 @@ public class AsdrSample {
       else {
          yyerror("Type - Esperado token: int, boolean ou ident");
       }
-
+      laToken = this.yylex();
    }
 
    private void TypeRest() {
@@ -242,7 +244,7 @@ public class AsdrSample {
          verifica(']');
       } else if (laToken != '[') {// [ token
          if (debug)
-            System.out.println("TypeRest --> [ ]");
+            System.out.println("TypeRest --> [ empty ]");
          // verifica(']');
       } else {
          yyerror("TypeRest - Esperado token: [");
@@ -261,7 +263,7 @@ public class AsdrSample {
                : tokenList[expected - BASE_TOKEN_NUM]);
 
          laStr = ((laToken < BASE_TOKEN_NUM)
-               ? Character.toString(laToken)
+               ? Character.toString((char) laToken)
                : tokenList[laToken - BASE_TOKEN_NUM]);
 
          yyerror("esperado token: " + expStr +
