@@ -66,17 +66,16 @@ public class AsdrSample {
     * | [empty]
     * Statement ::= CMDO
     * CMDO ::= Skip
-    * Expression ::= Skip
     */
 
    private void Program() {
       if (laToken == CLASS) {// class token
          if (debug)
-            System.out.println("Program --> MainClass ( ClassDeclaration )* <EOF>");
+            System.out.println("Program --> MainClass ");
          MainClass();
          while (laToken == CLASS) {// class token
             if (debug)
-               System.out.println("Program --> MainClass ( ClassDeclaration )* <EOF>");
+               System.out.println("Program --> ( ClassDeclaration )*");
             ClassDeclaration();
          }
          // verifica(Yylex.YYEOF);
@@ -106,7 +105,9 @@ public class AsdrSample {
          verifica('{');
          Statement();
          verifica('}');
+         
          verifica('}');
+         
       } else {
          yyerror("MainClass - Esperado token: class");
       }
@@ -120,27 +121,27 @@ public class AsdrSample {
       if (laToken == CLASS) {// class tokenBASE_TOKEN_NUM
          if (debug)
             System.out.println(
-                  "ClassDeclaration --> class Identifier ( extends Identifier )? { ( VarDeclaration )* ( MethodDeclaration )* }");
+                  "ClassDeclaration --> class Identifier");
          verifica(CLASS);
          verifica(IDENT);
          if (laToken == EXTENDS) {// extends token
             if (debug)
                System.out.println(
-                     "ClassDeclaration --> class Identifier ( extends Identifier )? { ( VarDeclaration )* ( MethodDeclaration )* }");
+                     "ClassDeclaration --> extends Identifier");
             verifica(EXTENDS);
             verifica(IDENT);
          }
          verifica('{');
-         while (laToken == INT || laToken == BOOLEAN) {// int or boolean token
+         while (laToken == INT || laToken == BOOLEAN || laToken == IDENT) {// int or boolean token
             if (debug)
                System.out.println(
-                     "ClassDeclaration --> class Identifier ( extends Identifier )? { ( VarDeclaration )* ( MethodDeclaration )* }");
+                     "ClassDeclaration --> (VarDeclaration)*");
             VarDeclaration();
          }
          while (laToken == PUBLIC) {// public token
             if (debug)
                System.out.println(
-                     "ClassDeclaration --> class Identifier ( extends Identifier )? { ( VarDeclaration )* ( MethodDeclaration )* }");
+                     "ClassDeclaration --> (MethodDeclaration)* }");
             MethodDeclaration();
          }
          verifica('}');
@@ -150,7 +151,7 @@ public class AsdrSample {
    }
 
    private void VarDeclaration() {
-      if (laToken == INT || laToken == BOOLEAN) {// int or boolean token
+      if (laToken == INT || laToken == BOOLEAN || laToken == IDENT) {// int or boolean token
          if (debug)
             System.out.println("VarDeclaration --> Type Identifier ;");
          Type();
@@ -165,21 +166,21 @@ public class AsdrSample {
       if (laToken == PUBLIC) {// public token
          if (debug)
             System.out.println(
-                  "MethodDeclaration --> public Type Identifier ( ( Type Identifier ( , Type Identifier )* )? ) { ( VarDeclaration )* ( Statement )* return Expression ; }");
+                  "MethodDeclaration --> public Type Identifier ( ");
          verifica(PUBLIC);
          Type();
          verifica(IDENT);
          verifica('(');
-         if (laToken == INT || laToken == BOOLEAN) {// int or boolean token
+         if (laToken == INT || laToken == BOOLEAN || laToken == IDENT) {// int or boolean token
             if (debug)
                System.out.println(
-                     "MethodDeclaration --> public Type Identifier ( ( Type Identifier ( , Type Identifier )* )? ) { ( VarDeclaration )* ( Statement )* return Expression ; }");
+                     "MethodDeclaration --> Type Identifier ");
             Type();
             verifica(IDENT);
             while (laToken == ',') {// , token
                if (debug)
                   System.out.println(
-                        "MethodDeclaration --> public Type Identifier ( ( Type Identifier ( , Type Identifier )* )? ) { ( VarDeclaration )* ( Statement )* return Expression ; }");
+                        "MethodDeclaration --> , Type Identifier )* )? ");
                verifica(',');
                Type();
                verifica(IDENT);
@@ -187,23 +188,23 @@ public class AsdrSample {
          }
          verifica(')');
          verifica('{');
-         while (laToken == INT || laToken == BOOLEAN) {// int or boolean token
+         while (laToken == INT || laToken == BOOLEAN || laToken == IDENT) {// int or boolean token
             if (debug)
                System.out.println(
-                     "MethodDeclaration --> public Type Identifier ( ( Type Identifier ( , Type Identifier )* )? ) { ( VarDeclaration )* ( Statement )* return Expression ; }");
+                     "MethodDeclaration --> ( VarDeclaration )* ");
             VarDeclaration();
          }
          while (laToken == IDENT || laToken == PRINT || laToken == WHILE || laToken == IF) {// ident, print, while or if
                                                                                             // token
             if (debug)
                System.out.println(
-                     "MethodDeclaration --> public Type Identifier ( ( Type Identifier ( , Type Identifier )* )? ) { ( VarDeclaration )* ( Statement )* return Expression ; }");
+                     "MethodDeclaration --> Statement");
             Statement();
          }
          
          verifica(CMDO);
          // verifica(RETURN);
-         // verifica(NUM);
+         //verifica(NUM);
          // verifica(';');
          verifica('}');
       } else {
@@ -211,14 +212,13 @@ public class AsdrSample {
       }
    }
 
-   private void Expression() {
-      // 
-   }
+
 
    private void Type() {
       if (laToken == INT) {// int token
          if (debug)
             System.out.println("Type --> int");
+         verifica(INT);
          TypeRest();
       } else if (laToken == BOOLEAN) {// boolean token
          if (debug)
@@ -233,7 +233,7 @@ public class AsdrSample {
       else {
          yyerror("Type - Esperado token: int, boolean ou ident");
       }
-      laToken = this.yylex();
+      
    }
 
    private void TypeRest() {
@@ -244,7 +244,7 @@ public class AsdrSample {
          verifica(']');
       } else if (laToken != '[') {// [ token
          if (debug)
-            System.out.println("TypeRest --> [ empty ]");
+         System.out.println("TypeRest --> [ empty ]");
          // verifica(']');
       } else {
          yyerror("TypeRest - Esperado token: [");

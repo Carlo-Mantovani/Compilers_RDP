@@ -49,7 +49,7 @@ LineTerminator = \r|\n|\r\n
 
 
 %%
-"//" .* [LineTerminator]   { }
+"//" [^\r\n]* { }
 "/*" .* "*/" { }
 
 
