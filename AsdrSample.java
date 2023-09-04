@@ -58,7 +58,7 @@ public class AsdrSample {
     * VarDeclaration ::= Type Identifier ";"
     * MethodDeclaration ::= "public" Type Identifier "(" ( Type Identifier (
     * ","Type Identifier )* )? ")" "{" ( VarDeclaration )* ( Statement )* "return"
-    * 42 ";" "}"
+    * NUM ";" "}"
     * Type ::= "int" TypeRest
     * | "boolean"
     * | Identifier
@@ -195,7 +195,7 @@ public class AsdrSample {
                      "MethodDeclaration --> ( VarDeclaration )* ");
             VarDeclaration();
          }
-         while (laToken == IDENT || laToken == PRINT || laToken == WHILE || laToken == IF) {// ident, print, while or if
+         if (laToken == CMDO){// ident, print, while or if
                                                                                             // token
             if (debug)
                System.out.println(
@@ -204,8 +204,8 @@ public class AsdrSample {
          }
          if (debug)
             System.out.println(
-                  "MethodDeclaration --> return 42 ; }");
-         verifica(CMDO);
+                  "MethodDeclaration --> return NUM ; }");
+         
          verifica(RETURN);
          verifica(NUM);
          verifica(';');
