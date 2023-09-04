@@ -17,6 +17,7 @@ class BBS {
     public int Start(int sz) {
         int aux01;
        cmdo
+       return 42;
     }
 
     // Sort array of integers using Bublesort method
@@ -31,17 +32,20 @@ class BBS {
         int j;
         int t;
        cmdo
+       return 42;
     }
 
     // Printing method
     public int Print() {
         int j;
        cmdo
+       return 42;
     }
 
     // Initialize array of integers
     public int Init(int sz) {
        cmdo
+       return 42;
     }
 
 }

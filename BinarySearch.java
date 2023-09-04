@@ -1,6 +1,7 @@
 class BinarySearch{
     public static void main(String[] a){
 	cmdo
+  
     }
 }
 // This class contains an array of integers and
@@ -17,6 +18,7 @@ class BS{
 	int aux01 ;
 	int aux02 ;
 	cmdo
+    return 42;
     }
 
 
@@ -32,6 +34,7 @@ class BS{
 	int nt ;
 
 	cmdo
+    return 42;
     }
 
     // This method computes and returns the
@@ -42,6 +45,7 @@ class BS{
 	int aux03 ;
 
 	cmdo
+    return 42;
     }
 
     
@@ -53,6 +57,7 @@ class BS{
 	int aux02 ;
 
 	cmdo
+    return 42;
     }
 
     // Print the integer array
@@ -60,6 +65,7 @@ class BS{
 	int j ;
 
 	cmdo
+    return 42;
     }
     
 
@@ -71,6 +77,7 @@ class BS{
 	int aux01 ;
 
 	cmdo
+    return 42;
     }
 
 }

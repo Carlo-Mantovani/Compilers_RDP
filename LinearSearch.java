@@ -18,6 +18,7 @@ class LS {
         int aux02;
 
        cmdo
+       return 42;
     }
 
     // Print array of integers
@@ -25,6 +26,7 @@ class LS {
         int j;
 
         cmdo
+        return 42;
     }
 
     // Search for a specific value (num) using
@@ -38,6 +40,7 @@ class LS {
         int nt;
 
         cmdo
+        return 42;
     }
 
     // initialize array of integers with some
@@ -49,6 +52,7 @@ class LS {
         int aux02;
 
        cmdo
+       return 42;
     }
 
 }

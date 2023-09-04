@@ -17,6 +17,7 @@ class TV {
         MyVisitor v;
 
       cmdo
+      return 42;
     }
 
 }
@@ -33,46 +34,57 @@ class Tree {
 
     public boolean Init(int v_key) {
        cmdo
+       return 42;
     }
 
     public boolean SetRight(Tree rn) {
         cmdo
+        return 42;
     }
 
     public boolean SetLeft(Tree ln) {
         cmdo
+        return 42;
     }
 
     public Tree GetRight() {
         cmdo
+        return 42;
     }
 
     public Tree GetLeft() {
       cmdo
+      return 42;
     }
 
     public int GetKey() {
         cmdo
+        return 42;
     }
 
     public boolean SetKey(int v_key) {
        cmdo
+       return 42;
     }
 
     public boolean GetHas_Right() {
         cmdo
+        return 42;
     }
 
     public boolean GetHas_Left() {
         cmdo
+        return 42;
     }
 
     public boolean SetHas_Left(boolean val) {
         cmdo
+        return 42;
     }
 
     public boolean SetHas_Right(boolean val) {
         cmdo
+        return 42;
     }
 
     public boolean Compare(int num1, int num2) {
@@ -80,6 +92,7 @@ class Tree {
         int nti;
 
         cmdo
+        return 42;
     }
 
     public boolean Insert(int v_key) {
@@ -90,6 +103,7 @@ class Tree {
         int key_aux;
 
        cmdo
+       return 42;
     }
 
     public boolean Delete(int v_key) {
@@ -102,6 +116,7 @@ class Tree {
         int key_aux;
 
         cmdo
+        return 42;
     }
 
     public boolean Remove(Tree p_node, Tree c_node) {
@@ -110,16 +125,19 @@ class Tree {
         int auxkey2;
 
         cmdo
+        return 42;
     }
 
     public boolean RemoveRight(Tree p_node, Tree c_node) {
         boolean ntb;
        cmdo
+       return 42;
     }
 
     public boolean RemoveLeft(Tree p_node, Tree c_node) {
         boolean ntb;
         cmdo
+        return 42;
     }
 
     public int Search(int v_key) {
@@ -129,6 +147,7 @@ class Tree {
         int key_aux;
 
         cmdo
+        return 42;
     }
 
     public boolean Print() {
@@ -136,18 +155,21 @@ class Tree {
         Tree current_node;
 
         cmdo
+        return 42;
     }
 
     public boolean RecPrint(Tree node) {
         boolean ntb;
 
         cmdo
+        return 42;
     }
 
     public int accept(Visitor v) {
         int nti;
 
         cmdo
+        return 42;
     }
 
 }
@@ -159,6 +181,7 @@ class Visitor {
     public int visit(Tree n) {
         int nti;
 cmdo
+return 42;
     }
 
 }
@@ -169,6 +192,7 @@ class MyVisitor extends Visitor {
         int nti;
 
         cmdo
+        return 42;
     }
 
 }

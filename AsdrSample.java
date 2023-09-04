@@ -104,6 +104,7 @@ public class AsdrSample {
          verifica(')');
          verifica('{');
          Statement();
+
          verifica('}');
          
          verifica('}');
@@ -201,11 +202,13 @@ public class AsdrSample {
                      "MethodDeclaration --> Statement");
             Statement();
          }
-         
+         if (debug)
+            System.out.println(
+                  "MethodDeclaration --> return 42 ; }");
          verifica(CMDO);
-         // verifica(RETURN);
-         //verifica(NUM);
-         // verifica(';');
+         verifica(RETURN);
+         verifica(NUM);
+         verifica(';');
          verifica('}');
       } else {
          yyerror("MethodDeclaration - Esperado token: public");

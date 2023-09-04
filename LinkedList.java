@@ -12,18 +12,22 @@ class Element {
     // Initialize some class variables
     public boolean Init(int v_Age, int v_Salary, boolean v_Married) {
       cmdo
+      return 42;
     }
 
     public int GetAge() {
         cmdo
+        return 42;
     }
 
     public int GetSalary() {
         cmdo
+        return 42;
     }
 
     public boolean GetMarried() {
         cmdo
+        return 42;
     }
 
     // This method returns true if the object "other"
@@ -34,6 +38,7 @@ class Element {
         int aux02;
         int nt;
        cmdo
+       return 42;
     }
 
     // This method compares two integers and
@@ -43,6 +48,7 @@ class Element {
         boolean retval;
         int aux02;
       cmdo
+      return 42;
     }
 
 }
@@ -55,11 +61,13 @@ class List {
     // Initialize the node list as the last node
     public boolean Init() {
       cmdo
+      return 42;
     }
 
     // Initialize the values of a new node
     public boolean InitNew(Element v_elem, List v_next, boolean v_end) {
        cmdo
+       return 42;
     }
 
     // Insert a new node at the beginning of the list
@@ -68,11 +76,13 @@ class List {
         List aux03;
         List aux02;
         cmdo
+        return 42;
     }
 
     // Update the the pointer to the next node
     public boolean SetNext(List v_next) {
         cmdo
+        return 42;
     }
 
     // Delete an element e from the list
@@ -88,6 +98,7 @@ class List {
         int nt;
 
         cmdo
+        return 42;
     }
 
     // Search for an element e on the list
@@ -99,18 +110,22 @@ class List {
         int nt;
 
         cmdo
+        return 42;
     }
 
     public boolean GetEnd() {
         cmdo
+        return 42;
     }
 
     public Element GetElem() {
         cmdo
+        return 42;
     }
 
     public List GetNext() {
         cmdo
+        return 42;
     }
 
     // Print the linked list
@@ -120,6 +135,7 @@ class List {
         Element var_elem;
 
         cmdo
+        return 42;
     }
 }
 
@@ -137,6 +153,7 @@ class LL {
         Element el03;
 
         cmdo
+        return 42;
 
     }
 

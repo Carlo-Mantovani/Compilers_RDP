@@ -13,6 +13,7 @@ class BT {
         boolean ntb;
         int nti;
         cmdo
+        return 42;
     }
 
 }
@@ -28,48 +29,59 @@ class Tree {
     // Initialize a node with a key value and no children
     public boolean Init(int v_key) {
         cmdo
+        return 42;
     }
 
     // Update the right child with rn
     public boolean SetRight(Tree rn) {
         cmdo
+        return 42;
     }
 
     // Update the left child with ln
     public boolean SetLeft(Tree ln) {
        cmdo
+       return 42;
     }
 
     public Tree GetRight() {
         cmdo
+        return 42;
     }
 
     public Tree GetLeft() {
         cmdo
+        return 42;
     }
 
     public int GetKey() {
         cmdo
+        return 42;
     }
 
     public boolean SetKey(int v_key) {
         cmdo
+        return 42;
     }
 
     public boolean GetHas_Right() {
         cmdo
+        return 42;
     }
 
     public boolean GetHas_Left() {
         cmdo
+        return 42;
     }
 
     public boolean SetHas_Left(boolean val) {
         cmdo
+        return 42;
     }
 
     public boolean SetHas_Right(boolean val) {
         cmdo
+        return 42;
     }
 
     // This method compares two integers and
@@ -80,6 +92,7 @@ class Tree {
         int nti;
 
        cmdo
+       return 42;
     }
 
     // Insert a new element in the tree
@@ -91,6 +104,7 @@ class Tree {
         Tree current_node;
 
        cmdo
+       return 42;
     }
 
     // Delete an element from the tree
@@ -104,6 +118,7 @@ class Tree {
         boolean ntb;
 
         cmdo
+        return 42;
     }
 
     // Check if the element to be removed will use the
@@ -114,6 +129,7 @@ class Tree {
         int auxkey2;
 
        cmdo
+       return 42;
     }
 
     // Copy the child key to the parent until a leaf is
@@ -123,6 +139,7 @@ class Tree {
         boolean ntb;
 
         cmdo
+        return 42;
     }
 
     // Copy the child key to the parent until a leaf is
@@ -132,6 +149,7 @@ class Tree {
         boolean ntb;
 
        cmdo
+       return 42;
     }
 
     // Search for an elemnt in the tree
@@ -142,6 +160,7 @@ class Tree {
         int key_aux;
 
         cmdo
+        return 42;
     }
 
     // Invoke the method to really print the tree elements
@@ -150,6 +169,7 @@ class Tree {
         boolean ntb;
 
        cmdo
+       return 42;
     }
 
     // Print the elements of the tree
@@ -157,6 +177,7 @@ class Tree {
         boolean ntb;
 
         cmdo
+        return 42;
     }
 
 }

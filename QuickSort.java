@@ -17,6 +17,7 @@ class QS {
     public int Start(int sz) {
         int aux01;
         cmdo
+        return 42;
     }
 
     // Sort array of integers using Quicksort method
@@ -30,17 +31,20 @@ class QS {
         boolean cont02;
         int aux03;
        cmdo
+       return 42;
     }
 
     // Print array of integers
     public int Print() {
         int j;
     cmdo
+    return 42;
     }
 
     // Initialize array of integers
     public int Init(int sz) {
       cmdo
+      return 42;
     }
 
 }
